@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login y Registro</title>
+    <link rel="stylesheet" href="../css/login.css"> <!-- A tu CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Iconos de Boxicons -->
+</head>
+<body>
+
+<div class="wrapper">
+    <nav class="nav">
+        <div class="nav-menu" id="navMenu"></div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="mostrarLogin()">Ingresa</button>
+            <button class="btn" id="registerBtn" onclick="mostrarRegistro()">Regístrate</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <div class="form-box">
+
+        <!-- Formulario de Login -->
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>¿Aún no tienes una cuenta? <a href="#" onclick="mostrarRegistro()">Regístrate</a></span>
+                <header>Ingresa</header>
+            </div>    
+
+            <form id="frmLogin">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Email" id="loginCorreo">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Contraseña" id="loginClave">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <button type="button" class="submit" onclick="login()">Ingresar</button>
+                <p id="mensajeLogin" style="color:red; margin-top:10px;"></p>
+            </form>
+            <a href="../index.html"><button class="back" type="button">Volver</button></a>
+
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Recuérdame</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario de Registro -->
+        <div class="register-container" id="register">
+            <div class="top">
+                <header>Regístrate</header>
+            </div>
+            <form id="frmRegistro">
+                <div class="two-forms">
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Nombre" id="NombreUsuario">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Apellido" id="ApellidoUsuario">
+                        <i class="bx bx-user"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Email" id="CorreoUsua">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Contraseña" id="ClaveUsuario">
+                    <i class="bx bx-lock"></i>
+                </div>
+                <button type="button" class="submit" onclick="registrar()">Registrar</button>
+                <p id="mensajeRegistro" style="color:green; margin-top:10px;"></p>
+            </form>
+
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Recuérdame</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Términos & Condiciones</a></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>   
+
+<script src="../js/login.js"></script> <!-- Tu JS aquí -->
+</body>
+</html>
